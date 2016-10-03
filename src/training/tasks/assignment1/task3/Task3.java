@@ -3,10 +3,10 @@ package training.tasks.assignment1.task3;
 public class Task3 {
 
 	/*
-	 * Требуется 3 аргумента: 
-	 * - нижняя граница интервала 
-	 * - верхняя граница интервала 
-	 * - шаг
+	 * РўСЂРµР±СѓРµС‚СЃСЏ 3 Р°СЂРіСѓРјРµРЅС‚Р°: 
+	 * - РЅРёР¶РЅСЏСЏ РіСЂР°РЅРёС†Р° РёРЅС‚РµСЂРІР°Р»Р° 
+	 * - РІРµСЂС…РЅСЏСЏ РіСЂР°РЅРёС†Р° РёРЅС‚РµСЂРІР°Р»Р° 
+	 * - С€Р°Рі
 	 */
 	public static void main(String[] args) {
 
@@ -16,7 +16,7 @@ public class Task3 {
 			final double step = Double.valueOf(args[2]);
 
 			if (upperLimit < lowerLimit) {
-				throw new IllegalArgumentException("Верхняя граница должна быть больше нижней границы");
+				throw new IllegalArgumentException("Р’РµСЂС…РЅСЏСЏ РіСЂР°РЅРёС†Р° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РЅРёР¶РЅРµР№ РіСЂР°РЅРёС†С‹");
 			}
 
 			System.out.printf("%8s %5s %10s%n", "x", "|", "f(x)");
@@ -26,16 +26,16 @@ public class Task3 {
 			}
 
 		} else {
-			System.out.println("Требуется 3 аргумента");
+			System.out.println("РўСЂРµР±СѓРµС‚СЃСЏ 3 Р°СЂРіСѓРјРµРЅС‚Р°");
 		}
 	}
 
 	/*
-	 * Вычисление функции f(x) = tg(2x) - 3
+	 * Р’С‹С‡РёСЃР»РµРЅРёРµ С„СѓРЅРєС†РёРё f(x) = tg(2x) - 3
 	 * 
-	 * @param x аргумент функции
+	 * @param x Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё
 	 * 
-	 * @return значение функции
+	 * @return Р·РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё
 	 */
 	private static double f(double x) {
 		return Math.tan(Math.toRadians(2 * x)) - 3;

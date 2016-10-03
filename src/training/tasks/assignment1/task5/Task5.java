@@ -3,8 +3,8 @@ package training.tasks.assignment1.task5;
 public class Task5 {
 	
 	/*
-	 * Требуется 1 аргумент:
-	 * - размерность матрицы
+	 * РўСЂРµР±СѓРµС‚СЃСЏ 1 Р°СЂРіСѓРјРµРЅС‚:
+	 * - СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РјР°С‚СЂРёС†С‹
 	 */
 	
 	public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Task5 {
 			final int n = Integer.valueOf(args[0]);
 			
 			if (n <= 1) {
-				throw new IllegalArgumentException("Размерность матрицы должна быть > 1");
+				throw new IllegalArgumentException("Р Р°Р·РјРµСЂРЅРѕСЃС‚СЊ РјР°С‚СЂРёС†С‹ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ > 1");
 			}
 			
 			for (int i = 0; i < n; i++) {
@@ -24,7 +24,7 @@ public class Task5 {
 			}
 			
 		} else {
-			System.out.println("Требуется 1 аргумент");
+			System.out.println("РўСЂРµР±СѓРµС‚СЃСЏ 1 Р°СЂРіСѓРјРµРЅС‚");
 		}
 	}
 }

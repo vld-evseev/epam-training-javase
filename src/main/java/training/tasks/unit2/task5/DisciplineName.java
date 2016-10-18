@@ -1,0 +1,13 @@
+package training.tasks.unit2.task5;
+
+public enum DisciplineName {
+    MATHEMATICAL_ANALYSIS,
+    COMPUTATIONAL_MATHEMATICS,
+    GEOMETRY,
+    PHYSICS,
+    PROBABILITY_THEORY,
+    COMPUTER_SCIENCE,
+    ELECTRICAL_ENGINEERING,
+    PHILOSOPHY,
+    ECOLOGY
+}

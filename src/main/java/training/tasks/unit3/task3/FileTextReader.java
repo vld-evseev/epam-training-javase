@@ -4,12 +4,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FileTextParser {
+public class FileTextReader {
 
     private String filePath;
     private String fileContent;
 
-    public FileTextParser(String filePath) {
+    public FileTextReader(String filePath) {
         this.filePath = filePath;
         fileContent = readFileContent();
     }

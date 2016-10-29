@@ -10,12 +10,12 @@ import java.util.regex.Pattern;
 
 import static org.junit.Assert.assertTrue;
 
-public class FileTextParserTest {
+public class FileTextReaderTest {
 
     @Test
     public void test() {
         Pattern pattern = Pattern.compile("[Рр]ис\\.\\s\\d{1,2}");
-        FileTextParser textParser = new FileTextParser("unit3/task3/attachment.html");
+        FileTextReader textParser = new FileTextReader("unit3/task3/attachment.html");
 
         OccurrenceFinder finder = new OccurrenceFinder(textParser.getContent());
         List<String> matchesList = finder.find();

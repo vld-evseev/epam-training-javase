@@ -20,4 +20,10 @@ public class PropertiesReaderTest {
         PropertiesReader propertiesReader = new PropertiesReader(TEST_PROPS);
         propertiesReader.readValue("nonExistingKey");
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void propsNotFoundTest() throws KeyNotFoundException {
+        PropertiesReader propertiesReader = new PropertiesReader("non-existing-props.properties");
+        String value = propertiesReader.readValue("key1");
+    }
 }

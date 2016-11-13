@@ -1,0 +1,10 @@
+Application of Java
+Java is widely used in every corner of world and of human life. Java is not only used in softwares but is also widely used in designing hardware controlling software components. There are more than 930 million JRE downloads each year and 3 billion mobile phones run java.
+
+Following are some other usage of Java :
+
+Developing Desktop Applications
+Web Applications like Linkedin.com, Snapdeal.com etc
+Mobile Operating System like Android
+Embedded Systems
+Robotics and games etc.

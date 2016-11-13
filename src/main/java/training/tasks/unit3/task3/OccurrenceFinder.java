@@ -14,6 +14,7 @@ public class OccurrenceFinder {
     private static final Pattern splitSentencesPattern = Pattern.compile("[.!?\\\\-](\\s|&nbsp;)");
     private static final Pattern firstPartOfSentencePattern = Pattern.compile("[А-Я].*\\([Рр]ис");
     private static final Pattern restPartOfSentencePattern = Pattern.compile("[0-9]+(\\-[а-я]|-[а-я],[а-я]|)\\)(\\([Рр]ис|.*)");
+    private static final Pattern startOfStringPattern = Pattern.compile("^([А-Я]|&nbsp;[А-Я])");
 
 
     public OccurrenceFinder(String content) {
@@ -30,22 +31,24 @@ public class OccurrenceFinder {
                 Matcher matcher = significantSentencesPattern.matcher(token);
                 matcher.useTransparentBounds(true);
 
+
                 while (matcher.find()) {
                     String subToken = matcher.group();
                     String[] sentences = subToken.split(splitSentencesPattern.pattern());
 
                     for (String sentence : sentences) {
-                        if (matchFirstPartOfSentence(sentence)) {
+
+                        if (matchStartOfString(sentence) && stringBuilder.length() > 0) {
+                            occurrences.add(stringBuilder.toString());
                             stringBuilder.setLength(0);
+                        }
+
+                        if (matchFirstPartOfSentence(sentence)) {
+
                             stringBuilder.append(sentence).append(". ");
                         } else if (matchRestPartOfSentence(sentence)) {
                             stringBuilder.append(sentence).append(". ");
                         }
-                    }
-
-                    if (stringBuilder.length() > 0) {
-                        occurrences.add(stringBuilder.toString());
-                        stringBuilder.setLength(0);
                     }
                 }
             }
@@ -61,6 +64,11 @@ public class OccurrenceFinder {
 
     private static boolean matchRestPartOfSentence(String string) {
         Matcher matcher = restPartOfSentencePattern.matcher(string);
+        return matcher.find();
+    }
+
+    private static boolean matchStartOfString(String string) {
+        Matcher matcher = startOfStringPattern.matcher(string);
         return matcher.find();
     }
 

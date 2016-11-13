@@ -1,0 +1,7 @@
+boolean : 5
+extends : 2
+int : 3
+interface : 2
+package : 1
+public : 1
+void : 2

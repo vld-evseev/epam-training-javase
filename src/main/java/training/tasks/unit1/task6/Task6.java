@@ -32,7 +32,7 @@ public class Task6 {
         System.out.println("Use the following keys shortcuts:");
         System.out.println("1 - add record");
         System.out.println("2 - delete record");
-        System.out.println("3 - edit record");
+        System.out.println("3 - write record");
         System.out.println("4 - show all records");
         System.out.println("q - exit");
 
@@ -63,7 +63,7 @@ public class Task6 {
 
                         break;
                     case EDIT_KEY:
-                        System.out.print("Enter the record ID to edit: ");
+                        System.out.print("Enter the record ID to write: ");
                         final int idToEdit = Integer.valueOf(keyboard.readLine());
                         final Record recordToEdit = notepad.findRecordById(idToEdit);
 
